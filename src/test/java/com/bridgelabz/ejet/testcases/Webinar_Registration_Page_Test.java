@@ -14,7 +14,7 @@ public class Webinar_Registration_Page_Test extends BaseClass {
     }
 
     @BeforeMethod
-    public void initialization(){
+    public void initialization() throws InterruptedException {
         setUp();
         page = new Webinar_Registration_Page(driver);
     }
