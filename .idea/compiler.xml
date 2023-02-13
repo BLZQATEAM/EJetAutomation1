@@ -6,7 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="EJetTestScript" />
+=======
+        <module name="Ejet_Project" />
+>>>>>>> 247b49bccfe5deb6ca39a64984c5f9d8ada9ed01
       </profile>
     </annotationProcessing>
   </component>
