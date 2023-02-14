@@ -35,7 +35,7 @@ public class Webinar_Registration_Page_Test extends BaseClass {
     }
     @Test
     public void invalid_phn_No_Starting_With_Plus_Ninty_One() throws InterruptedException {
-        String error2 = page.verify_Error_Msg_1("+91-999999");
+        String error2 = page.verify_Error_Msg_1("+91999999");
         System.out.println("The actual error is:" + error2);
         Assert.assertEquals(error2, "Invalid Phone Number");
         Thread.sleep(3000);
