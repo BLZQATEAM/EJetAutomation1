@@ -1,22 +1,22 @@
 package com.bridgelabz.ejet.testcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.Webinar_Registration_Page;
+import com.bridgelabz.ejet.pages.Phone_Number_Field;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class Webinar_Registration_Page_Test extends BaseClass {
 
-    Webinar_Registration_Page page;
+    Phone_Number_Field page;
 
     public Webinar_Registration_Page_Test(){
         super();
     }
 
     @BeforeMethod
-    public void initialization() throws InterruptedException {
-        setUp();
-        page = new Webinar_Registration_Page(driver);
+    public void setUp() throws InterruptedException {
+        initialization();
+        page = new Phone_Number_Field(driver);
     }
 
     @Test
