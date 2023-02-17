@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/dell/Documents/QADevPrograms/EJetTestScript">
+        <classes>
+        <class name="com.bridgelabz.ejet.testcases.Education_Qualification_Test">
+            <methods>
+                <include name="select_Engineering_Cs_Or_It"/>
+                <include name="select_Engineering_Non_Cs_Or_It"/>
+                <include name="select_Masters_Cs_Or_It"/>
+                <include name="select_Masters_Non_Cs_Or_It"/>
+                <include name="select_Other"/>
+                <include name="not_select_passOut_Year"/>
+            </methods>
+        </class>
+            <class name="com.bridgelabz.ejet.testcases.Email_Field_Test">
+                <methods>
+                    <include name="enter_valid_emailId"/>
+                    <include name="enter_emptyString_emailField"/>
+                    <include name="enter_invalid_emailId"/>
+                    <include name="enter_emailId_with_space"/>
+                    <include name="after_space_enter_valid_email"/>
+                    <include name="without_dot_enter_email"/>
+                    <include name="without_at_enter_email"/>
+                    <include name="without_dotcom_enter_email"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.Enter_Room_Test">
+                <methods>
+                    <include name="click_EnterButton"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.Existing_PhoneNumber">
+                <methods>
+                    <include name="verifyExistingPhoneNumber_registration"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.FullName_Field_Test">
+                <methods>
+                    <include name="enter_valid_name"/>
+                    <include name="enter_emptyString_nameField"/>
+                    <include name="enter_twoChar_nameField"/>
+                    <include name="enter_threeChar_nameField"/>
+                    <include name="without_space_user_enter_firstName_And_lastName_nameField"/>
+                    <include name="after_enter_lastName_user_provide_space_nameField"/>
+                    <include name="inBetween_firstName_And_lastName_user_provide_doubleSpace_nameField"/>
+                    <include name="user_enter_threeGroup_of_name"/>
+                    <include name="user_enter_numericChar_nameField"/>
+                    <include name="user_remove_validName_from_Field"/>
+                    <include name="user_remove_invalidName_from_Field"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.PassOut_Field_Test">
+                <methods>
+                    <include name="select_passOut_year_TwoThousandTwentyFour"/>
+                    <include name="select_passOut_year_TwoThousandTwentyThree"/>
+                    <include name="select_passOut_year_TwoThousandTwentyTwo"/>
+                    <include name="select_passOut_TwoThousandTwentyOne"/>
+                    <include name="select_passOut_year_TwoThousandTwenty"/>
+                    <include name="select_passOut_before_TwoThousandTwenty"/>
+                    <include name="select_passOut_after_TwoThousandTwentyFour"/>
+                    <include name="not_select_passOut_Year"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.WebinarRegistration_Success">
+                <methods>
+                    <include name="webinarUserRegistrationSuccess_AndRedirectOnAttendOrientationScreen"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.testcases.Webinar_Registration_Page_Test">
+                <methods>
+                    <include name="invalid_phn_No_Starting_With_Zero"/>
+                    <include name="invalid_phn_No_Starting_With_Plus_Ninty_One_And_Hyphen"/>
+                    <include name="invalid_phn_No_Starting_With_Plus_Ninty_One"/>
+                    <include name="valid_phn_no"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

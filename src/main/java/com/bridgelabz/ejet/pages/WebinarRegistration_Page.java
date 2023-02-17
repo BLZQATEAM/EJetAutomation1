@@ -39,9 +39,9 @@ public class WebinarRegistration_Page extends BaseClass {
 
     public void enterData_InFields() throws InterruptedException {
         Thread.sleep(3000);
-        phone_Number.sendKeys("7038053670");
+        phone_Number.sendKeys("7038053660");
         Thread.sleep(3000);
-        txt_email.sendKeys("sheetal.chaudhari1@bridgelabz.com");
+        txt_email.sendKeys("sheetal.chaudhari2@bridgelabz.com");
         Thread.sleep(3000);
         txt_uname.sendKeys("Sheetal Chaudhari");
 

@@ -14,12 +14,12 @@ import java.io.IOException;
 public class Enter_Room_Test extends BaseClass {
     Enter_Room_Button enterRoom;
 
-    public Enter_Room_Test() throws IOException {
+    public Enter_Room_Test() {
         super();
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         initialization();
         enterRoom = new Enter_Room_Button(driver);
     }

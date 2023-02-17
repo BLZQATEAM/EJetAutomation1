@@ -6,12 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.io.IOException;
 
 public class WebinarRegistration_Success extends BaseClass {
     WebinarRegistration_Page page;
     @BeforeMethod
-    public void setUp() throws InterruptedException, IOException {
+    public void setUp() throws InterruptedException {
         initialization();
         page = new WebinarRegistration_Page(driver);
     }

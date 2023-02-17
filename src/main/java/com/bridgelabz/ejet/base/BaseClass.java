@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseClass extends ReadPropertiesFile {
     public WebDriver driver;
 
-    public void setUp() throws InterruptedException {
+    public void initialization() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
