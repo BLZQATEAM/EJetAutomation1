@@ -15,7 +15,7 @@ public class Email_Field_Test extends BaseClass {
         super();
     }
     @BeforeMethod
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
         initialization();
         email = new Email_Field(driver);
     }

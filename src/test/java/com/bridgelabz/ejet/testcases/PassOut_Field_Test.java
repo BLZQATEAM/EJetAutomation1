@@ -15,7 +15,7 @@ public class PassOut_Field_Test extends BaseClass {
         super();
     }
     @BeforeMethod
-    public void setUp(){
+    public void setUp() throws InterruptedException {
         initialization();
         passout = new PassOut_Field(driver);
     }

@@ -12,11 +12,11 @@ import java.io.IOException;
 
 public class FullName_Field_Test extends BaseClass {
     FullName_Field name;
-    public FullName_Field_Test() throws IOException {
+    public FullName_Field_Test() {
         super();
     }
     @BeforeMethod
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
         initialization();
         name = new FullName_Field(driver);
     }

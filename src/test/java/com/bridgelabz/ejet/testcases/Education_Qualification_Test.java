@@ -16,7 +16,7 @@ public class Education_Qualification_Test extends BaseClass {
         super();
     }
     @BeforeMethod
-    public void setUp()  {
+    public void setUp() throws InterruptedException {
         initialization();
         qualification = new Education_Qualification(driver);
     }
