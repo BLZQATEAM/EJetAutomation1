@@ -1,7 +1,7 @@
 package com.bridgelabz.ejet.testcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.Education_Qualification;
+import com.bridgelabz.ejet.pages.webinar.Education_Qualification;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

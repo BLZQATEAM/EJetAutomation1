@@ -1,7 +1,7 @@
 package com.bridgelabz.ejet.testcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.Enter_Room_Button;
+import com.bridgelabz.ejet.pages.webinar.Enter_Room_Button;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.io.IOException;
 
 public class Enter_Room_Test extends BaseClass {
     Enter_Room_Button enterRoom;

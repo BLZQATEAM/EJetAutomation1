@@ -1,8 +1,7 @@
 package com.bridgelabz.ejet.testcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.FullName_Field;
-import org.openqa.selenium.Keys;
+import com.bridgelabz.ejet.pages.webinar.FullName_Field;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

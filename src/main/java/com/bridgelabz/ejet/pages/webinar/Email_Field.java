@@ -18,7 +18,7 @@ public class Email_Field extends BaseClass {
     @FindBy(xpath="//p[text()='Email Required']")
     WebElement email_req_msg;
 
-    public Email_Field(WebDriver driver) throws IOException {
+    public Email_Field(WebDriver driver)  {
         this.driver=driver;
         PageFactory.initElements(driver, this);
     }
