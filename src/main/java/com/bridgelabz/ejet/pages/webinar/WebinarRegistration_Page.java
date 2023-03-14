@@ -64,4 +64,6 @@ public class WebinarRegistration_Page extends BaseClass {
         Thread.sleep(3000);
         return value;
     }
+
+
 }
