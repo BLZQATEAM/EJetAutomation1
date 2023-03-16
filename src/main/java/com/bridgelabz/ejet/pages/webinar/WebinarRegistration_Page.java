@@ -1,11 +1,15 @@
 package com.bridgelabz.ejet.pages;
 
 import com.bridgelabz.ejet.base.BaseClass;
+import com.bridgelabz.ejet.ejet_reports.Dashboard;
+import com.bridgelabz.ejet.ejet_reports.Login;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.IOException;
 
 public class WebinarRegistration_Page extends BaseClass {
     @FindBy(id="deftphnumber")
@@ -39,7 +43,7 @@ public class WebinarRegistration_Page extends BaseClass {
 
     public void enterData_InFields() throws InterruptedException {
         Thread.sleep(3000);
-        phone_Number.sendKeys("7038053660");
+        phone_Number.sendKeys("7038053665");
         Thread.sleep(3000);
         txt_email.sendKeys("sheetal.chaudhari2@bridgelabz.com");
         Thread.sleep(3000);
@@ -65,5 +69,13 @@ public class WebinarRegistration_Page extends BaseClass {
         return value;
     }
 
-
+//    public void dataValidation() throws IOException, InterruptedException {
+//        driver.navigate().to("https://ejetreports.bridgelabz.com/");
+//        Login logIn = new Login(driver);
+//        logIn.login("pm.reports@bridgelabz.com","Br1dge1@bz");
+//
+//        Dashboard dashboard = new Dashboard(driver);
+//        dashboard.select_Reports();
+//        dashboard.select_Report_Type("Get Registered Lead User by Slot Type With Date Range");
+//    }
 }

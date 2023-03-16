@@ -2,6 +2,8 @@ package com.bridgelabz.ejet.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,7 +11,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ReadWebinarPropertiesFile {
-    public WebDriver driver;
+    public static WebDriver driver = null;
     public Properties prop;
     public ReadWebinarPropertiesFile() throws IOException {
         prop = new Properties();
@@ -20,7 +22,11 @@ public class ReadWebinarPropertiesFile {
 
     }
     public void  initialization(String url){
-        driver = WebDriverManager.edgedriver().create();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
+        //driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
         if(url.equals(prop.getProperty("Reg_Url"))){
             driver.get(prop.getProperty("Reg_Url"));
@@ -28,6 +34,8 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("Orientation_Url"));
         }else if(url.equals(prop.getProperty("RegistrationInsta"))){
             driver.get(prop.getProperty("RegistrationInsta"));
+        }else if(url.equals(prop.getProperty("RegisterWebsiteLateral"))){
+            driver.get(prop.getProperty("RegisterWebsiteLateral"));
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

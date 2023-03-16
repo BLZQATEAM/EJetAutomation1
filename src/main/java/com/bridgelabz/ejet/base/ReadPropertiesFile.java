@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ReadPropertiesFile {
     public Properties properties;
-    private final String propertyFilePath= "C:\\Users\\dell\\Documents\\QADevPrograms\\EJetTestScript\\src\\main\\java\\com\\bridgelabz\\ejet\\testdata\\TestData.propertise";
+    private final String propertyFilePath= "C:\\Users\\dell\\Documents\\QADevPrograms\\EJetTestScript\\src\\main\\java\\com\\bridgelabz\\ejet\\testdata\\TestData.properties";
 
     public ReadPropertiesFile(){
         BufferedReader reader;
