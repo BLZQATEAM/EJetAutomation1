@@ -12,14 +12,14 @@ import java.io.IOException;
 
 public class Ph_Num_Field extends ReadWebinarPropertiesFile {
     @FindBy(id="deftphnumber")
-    WebElement txt_ph;
+    public WebElement txt_ph;
     @FindBy(id="defphicon")
-    WebElement tick_icon;
+    public WebElement tick_icon;
 
     @FindBy(xpath="//p[text()='Invalid Phone Number']")
-    WebElement invalid_ph_num_msg;
+    public WebElement invalid_ph_num_msg;
     @FindBy(xpath="//p[text()='Phone Number Required']")
-    WebElement ph_num_req_msg;
+    public WebElement ph_num_req_msg;
 
     public Ph_Num_Field(WebDriver driver) throws IOException {
         this.driver=driver;

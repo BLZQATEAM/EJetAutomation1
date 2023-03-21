@@ -13,23 +13,23 @@ public class Work_Area_Field extends ReadWebinarPropertiesFile {
     @FindBy(id ="deftwarea")
     WebElement work_area;
     @FindBy(xpath="//p[text()='Work Area Required']")
-    WebElement error;
+    public WebElement error;
     @FindBy(xpath="//div[text()=' Software Development ']")
-    WebElement software_dev;
+    public WebElement software_dev;
     @FindBy(xpath="//div[text()=' DBA/SQL Developer ']")
-    WebElement db_dev;
+    public WebElement db_dev;
     @FindBy(xpath="//div[text()=' Frontend - HTML/CSS ']")
-    WebElement frontend;
+    public WebElement frontend;
     @FindBy(xpath="//div[text()=' Manual QA ']")
-    WebElement manual_qa;
+    public WebElement manual_qa;
     @FindBy(xpath="//div[text()=' MIS/Data Analyst ']")
-    WebElement data_analyst;
+    public WebElement data_analyst;
     @FindBy(xpath="//div[text()=' Tech Support ']")
-    WebElement tech_support;
+    public WebElement tech_support;
     @FindBy(xpath="//div[text()=' Non IT ']")
-    WebElement non_it;
+    public WebElement non_it;
     @FindBy(xpath="//div[text()=' Not Applicable ']")
-    WebElement NA;
+    public WebElement NA;
 
     public Work_Area_Field(WebDriver driver) throws IOException {
         this.driver = driver;

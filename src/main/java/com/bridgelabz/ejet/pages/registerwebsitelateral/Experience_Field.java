@@ -12,21 +12,21 @@ import java.io.IOException;
 
 public class Experience_Field extends ReadWebinarPropertiesFile {
     @FindBy(id ="deftyexpr")
-    WebElement exp_year;
+    public WebElement exp_year;
     @FindBy(xpath="//p[text()='Experience(Years) Required']")
-    WebElement error;
+    public WebElement error;
     @FindBy(xpath="//div[text()=' None ']")
-    WebElement none;
+    public WebElement none;
     @FindBy(xpath="//div[text()=' 0 to 6 months ']")
-    WebElement zero_to_six_month;
+    public WebElement zero_to_six_month;
     @FindBy(xpath="//div[text()=' 7 to 12 months ']")
-    WebElement seven_to_twelve_month;
+    public WebElement seven_to_twelve_month;
     @FindBy(xpath="//div[text()=' 1 - 2 Years ']")
-    WebElement one_to_two_year;
+    public WebElement one_to_two_year;
     @FindBy(xpath="//div[text()=' 2 - 3 Years ']")
-    WebElement two_to_three_year;
+    public WebElement two_to_three_year;
     @FindBy(xpath="//div[text()=' 3+ Years ']")
-    WebElement above_three_year;
+    public WebElement above_three_year;
 
     public Experience_Field(WebDriver driver) throws IOException {
         this.driver = driver;

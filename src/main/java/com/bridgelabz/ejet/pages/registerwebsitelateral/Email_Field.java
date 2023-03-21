@@ -12,13 +12,13 @@ import java.io.IOException;
 
 public class Email_Field extends ReadWebinarPropertiesFile {
     @FindBy(id="deftemail")
-    WebElement txt_email;
+    public WebElement txt_email;
     @FindBy(id="deftemailvalid")
-    WebElement error;
+    public WebElement error;
     @FindBy(xpath="//p[text()='Invalid Email']")
-    WebElement invalid_email_msg;
+    public WebElement invalid_email_msg;
     @FindBy(xpath="//p[text()='Email Required']")
-    WebElement email_req_msg;
+    public WebElement email_req_msg;
 
     public Email_Field(WebDriver driver) throws IOException {
         this.driver=driver;

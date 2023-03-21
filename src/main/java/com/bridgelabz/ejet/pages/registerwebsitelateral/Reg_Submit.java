@@ -11,14 +11,14 @@ import java.io.IOException;
 
 public class Reg_Submit extends ReadWebinarPropertiesFile {
     @FindBy(id ="deftsbtn")
-    WebElement btn_submit;
+    public WebElement btn_submit;
 
     public Reg_Submit(WebDriver driver) throws IOException {
         this.driver=driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void click_enable_EnterButton() throws InterruptedException, AWTException {
+    public void click_enable_EnterButton() throws InterruptedException {
         String classValue = btn_submit.getAttribute("class");
         Thread.sleep(3000);
         btn_submit.click();
@@ -29,7 +29,6 @@ public class Reg_Submit extends ReadWebinarPropertiesFile {
         Robot robot=new Robot();
         robot.mouseWheel(5);
         Thread.sleep(3000);
-//        String classValue = btn_submit.getAttribute("class");
         btn_submit.click();
     }
 }

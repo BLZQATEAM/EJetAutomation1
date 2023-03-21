@@ -12,21 +12,21 @@ import java.io.IOException;
 
 public class Full_Name_Field extends ReadWebinarPropertiesFile {
     @FindBy(id="deftusername")
-    WebElement txt_uname;
+    public WebElement txt_uname;
     @FindBy(id="deftuservalid")
-    WebElement error;
+    public WebElement error;
     @FindBy(xpath="//p[text()='You must enter a Full Name']")
-    WebElement username_err_msg1;
+    public WebElement username_err_msg1;
     @FindBy(xpath="//p[text()='First Name Min 3 character required']")
-    WebElement username_err_msg2;
+    public WebElement username_err_msg2;
     @FindBy(xpath="//p[text()='Please enter first & last name (min. 3 letters each) separated by a space.']")
-    WebElement username_err_msg3;
+    public WebElement username_err_msg3;
     @FindBy(xpath="//p[text()='Name must contain alphabetic only']")
-    WebElement username_err_msg4;
+    public WebElement username_err_msg4;
     @FindBy(xpath="//p[text()='No space after fullname and character']")
-    WebElement username_err_msg5;
+    public WebElement username_err_msg5;
     @FindBy(xpath="//p[text()='No space after first & last name']")
-    WebElement username_err_msg6;
+    public WebElement username_err_msg6;
 
     public Full_Name_Field(WebDriver driver) throws IOException {
         this.driver = driver;

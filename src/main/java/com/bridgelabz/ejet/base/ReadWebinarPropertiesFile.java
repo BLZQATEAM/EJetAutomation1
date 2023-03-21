@@ -36,6 +36,8 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("RegistrationInsta"));
         }else if(url.equals(prop.getProperty("RegisterWebsiteLateral"))){
             driver.get(prop.getProperty("RegisterWebsiteLateral"));
+        }else if(url.equals(prop.getProperty("indexPage_Url"))){
+            driver.get(prop.getProperty("indexPage_Url"));
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

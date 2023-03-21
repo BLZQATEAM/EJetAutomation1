@@ -12,19 +12,19 @@ import java.io.IOException;
 
 public class Education_Qualification extends ReadWebinarPropertiesFile {
     @FindBy(name="gradStream")
-    WebElement dr_stream;
+    public WebElement dr_stream;
     @FindBy(xpath="//p[text()='Stream Required']")
-    WebElement error;
+    public WebElement error;
     @FindBy(xpath="//div[text()=' Engineering (CS/IT) ']")
-    WebElement dr_Ecs;
+    public WebElement dr_Ecs;
     @FindBy(xpath="//div[text()=' Engineering (Non IT) ']")
-    WebElement dr_Enon;
+    public WebElement dr_Enon;
     @FindBy(xpath="//div[text()=' Masters (CS/IT) ']")
-    WebElement dr_Mcs;
+    public WebElement dr_Mcs;
     @FindBy(xpath="//div[text()=' Masters (Non IT) ']")
-    WebElement dr_Mnon;
+    public WebElement dr_Mnon;
     @FindBy(xpath="//div[text()=' Others (Non Engineering and Non MSc/MCA) ']")
-    WebElement dr_other;
+    public WebElement dr_other;
 
     public Education_Qualification(WebDriver driver) throws IOException {
         this.driver=driver;
