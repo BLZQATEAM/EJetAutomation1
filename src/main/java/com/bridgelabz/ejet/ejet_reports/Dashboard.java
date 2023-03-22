@@ -1,15 +1,10 @@
 package com.bridgelabz.ejet.ejet_reports;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.io.IOException;
-import java.util.List;
 
 public class Dashboard {
     WebDriver driver;
@@ -20,25 +15,28 @@ public class Dashboard {
     @FindBy(id = "demo-simple-select")
     WebElement select_reports_drop;
 
-    @FindBy(xpath = "//li[text()='Get Registered Lead User by Slot Type With Date Range']")
+    @FindBy(xpath = "//li[text()='New Lead Report With Date Range']")
     WebElement select_report_type;
 
     @FindBy(id = "outlined")
-    WebElement slot_type;
+    WebElement lead_activity_drop;
+
+    @FindBy(xpath = "//li[text()='orientation']")
+    WebElement select_lead_activity;
 
     @FindBy(xpath = "//body/div[@id='menu-slotType']/div[3]/ul[1]/li[6]")
     WebElement select_slot_type;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[1]/*[1]")
-    WebElement start_date_drop;
+    @FindBy (xpath = "(//button[@aria-label='Choose date'])[1]")
+    WebElement start_date_cal;
 
-    @FindBy(xpath = "//button[@aria-label='Mar 1, 2023']")
+    @FindBy(xpath = "//button[@aria-label='Mar 16, 2023']")
     WebElement select_start_date;
 
-    @FindBy(xpath = "//span[text()='End Date']")
-    WebElement end_date_drop;
+    @FindBy(xpath = "//button[@aria-label='Choose date']")
+    WebElement end_date_cal;
 
-    @FindBy(xpath = "//button[@aria-label='Mar 11, 2023']")
+    @FindBy(xpath="//button[@aria-label='Mar 17, 2023']")
     WebElement select_end_date;
 
     @FindBy(xpath = "//button[text()='Apply']")
@@ -58,31 +56,39 @@ public class Dashboard {
         Thread.sleep(4000);
         select_reports_drop.click();
         String report_Type = null;
-        if (reports.equals("Get Registered Lead User by Slot Type With Date Range")) {
+        if (reports.equals("New Lead Report With Date Range")) {
             report_Type = select_report_type.getText();
             select_report_type.click();
         }
         return report_Type;
     }
 
-    public void select_Slot_Type() throws InterruptedException {
-        Thread.sleep(500);
-        //driver.findElement(By.id("outlined")).click();
-        slot_type.click();
-        select_slot_type.click();
-        //driver.findElement(By.xpath("//body/div[@id='menu-slotType']/div[3]/ul[1]/li[6]")).click();
+    public String select_Lead_Activity(String lead_activity) throws InterruptedException {
+        Thread.sleep(4000);
+        lead_activity_drop.click();
+        String slot_Type = null;
+        if (lead_activity.equals("orientation")) {
+            slot_Type = select_lead_activity.getText();
+            select_lead_activity.click();
+        }
+        return slot_Type;
     }
 
-    public void select_Start_Date(String end_date) throws InterruptedException {
+    public String select_Start_Date(String start_date) throws InterruptedException {
+        start_date_cal.click();
         Thread.sleep(3000);
-        start_date_drop.click();
-    }
-
-    public String select_End_Date(String start_date) throws InterruptedException {
-        Thread.sleep(3000);
-        end_date_drop.click();
         String date = null;
-        if (start_date.equals("1")) {
+        if(start_date.equals("16")) {
+            date = select_start_date.getText();
+            select_start_date.click();
+        }
+        return date;
+    }
+
+    public String select_End_Date(String end_date) throws InterruptedException {
+        end_date_cal.click();
+        String date = null;
+        if(end_date.equals("17")) {
             date = select_end_date.getText();
             select_end_date.click();
         }

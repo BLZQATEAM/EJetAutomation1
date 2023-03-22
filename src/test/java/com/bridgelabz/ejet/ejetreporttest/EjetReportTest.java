@@ -23,8 +23,9 @@ public class EjetReportTest {
 
         Dashboard dashboard = new Dashboard(driver);
         dashboard.select_Reports();
-        dashboard.select_Report_Type("Get Registered Lead User by Slot Type With Date Range");
-        dashboard.select_Slot_Type();
-        dashboard.select_Start_Date("03/11/2023");
+        dashboard.select_Report_Type("New Lead Report With Date Range");
+        dashboard.select_Lead_Activity("orientation");
+        dashboard.select_Start_Date("16");
+        dashboard.select_End_Date("17");
     }
 }

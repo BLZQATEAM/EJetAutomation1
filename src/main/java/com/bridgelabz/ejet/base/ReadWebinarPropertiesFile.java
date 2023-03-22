@@ -4,9 +4,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -26,7 +28,7 @@ public class ReadWebinarPropertiesFile {
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
-        //driver = WebDriverManager.edgedriver().create();
+
         driver.manage().window().maximize();
         if(url.equals(prop.getProperty("Reg_Url"))){
             driver.get(prop.getProperty("Reg_Url"));
@@ -38,7 +40,9 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("RegisterWebsiteLateral"));
         }else if(url.equals(prop.getProperty("indexPage_Url"))){
             driver.get(prop.getProperty("indexPage_Url"));
+        }else if (url.equals(prop.getProperty("RegisterWebsiteUserUrl"))){
+            driver.get(prop.getProperty("RegisterWebsiteUserUrl"));
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 }

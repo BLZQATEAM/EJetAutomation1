@@ -1,7 +1,5 @@
 package com.bridgelabz.ejet.pages.index;
 
-import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
-import com.bridgelabz.ejet.pages.registerwebsitelateral.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,12 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.awt.*;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Set;
 
 public class Index_Main_Page {
     WebDriver driver;
