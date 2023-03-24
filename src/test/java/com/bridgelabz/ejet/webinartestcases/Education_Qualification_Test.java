@@ -3,11 +3,9 @@ package com.bridgelabz.ejet.webinartestcases;
 import com.bridgelabz.ejet.base.BaseClass;
 import com.bridgelabz.ejet.pages.Education_Qualification;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import java.awt.*;
+import org.testng.annotations.*;
 
+import java.awt.*;
 
 public class Education_Qualification_Test extends BaseClass {
     Education_Qualification qualification;
@@ -15,7 +13,7 @@ public class Education_Qualification_Test extends BaseClass {
     public Education_Qualification_Test()  {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws InterruptedException {
         initialization();
         qualification = new Education_Qualification(driver);
@@ -46,11 +44,11 @@ public class Education_Qualification_Test extends BaseClass {
         Assert.assertEquals(msg,"Others (Non Engineering and Non MSc/MCA)");
     }
     @Test
-    public void not_select_passOut_Year() throws InterruptedException, AWTException {
+    public void not_select_EducationQualification() throws InterruptedException, AWTException {
         String msg = qualification.empty_Value();
         Assert.assertEquals(msg,"Stream Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

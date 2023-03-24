@@ -68,8 +68,6 @@ public class PassOut_Field extends ReadWebinarPropertiesFile {
         return value;
     }
     public String empty_Value() throws AWTException, InterruptedException {
-        Robot robot=new Robot();
-        //robot.mouseWheel(5);
         drop_passout.sendKeys(Keys.PAGE_DOWN);
         Thread.sleep(3000);
         drop_passout.click();

@@ -3,9 +3,8 @@ package com.bridgelabz.ejet.webinartestcases;
 import com.bridgelabz.ejet.base.BaseClass;
 import com.bridgelabz.ejet.pages.Email_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.io.IOException;
 
 public class Email_Field_Test extends BaseClass {
@@ -14,7 +13,7 @@ public class Email_Field_Test extends BaseClass {
     public Email_Field_Test() {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
         initialization();
         email = new Email_Field(driver);
@@ -60,7 +59,7 @@ public class Email_Field_Test extends BaseClass {
         Assert.assertTrue(msg,"Invalid Email");
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

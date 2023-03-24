@@ -13,7 +13,7 @@ public class Webinar_Registration_Page_Test extends BaseClass {
         super();
     }
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws InterruptedException {
         initialization();
         page = new Phone_Number_Field(driver);
@@ -48,7 +48,7 @@ public class Webinar_Registration_Page_Test extends BaseClass {
         Assert.assertTrue(display);
     }
 
-    @AfterMethod
+    @AfterTest
     public void close_Browser(){
         driver.close();
     }

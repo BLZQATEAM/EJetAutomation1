@@ -3,9 +3,7 @@ package com.bridgelabz.ejet.indextestcases;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.index.Index_Main_Page;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import java.awt.*;
 import java.io.IOException;
 
@@ -14,7 +12,7 @@ public class Index_Main_Page_Test extends ReadWebinarPropertiesFile {
     public Index_Main_Page_Test() throws IOException {
     }
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("indexPage_Url"));
         index_main_page = new Index_Main_Page(driver);
@@ -45,7 +43,7 @@ public class Index_Main_Page_Test extends ReadWebinarPropertiesFile {
         Assert.assertEquals("BridgeLabz: Guaranteed Emerging Tech Job",title);
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

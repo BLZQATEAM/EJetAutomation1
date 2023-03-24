@@ -57,7 +57,6 @@ public class Education_Qualification extends ReadWebinarPropertiesFile {
     }
 
     public String empty_Value() throws AWTException, InterruptedException {
-        Robot robot=new Robot();
         dr_stream.sendKeys(Keys.PAGE_DOWN);
         Thread.sleep(3000);
         dr_stream.click();

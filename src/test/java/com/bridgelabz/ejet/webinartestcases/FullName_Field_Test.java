@@ -3,9 +3,7 @@ package com.bridgelabz.ejet.webinartestcases;
 import com.bridgelabz.ejet.base.BaseClass;
 import com.bridgelabz.ejet.pages.FullName_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 
@@ -14,7 +12,7 @@ public class FullName_Field_Test extends BaseClass {
     public FullName_Field_Test() {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
         initialization();
         name = new FullName_Field(driver);
@@ -76,7 +74,7 @@ public class FullName_Field_Test extends BaseClass {
         Thread.sleep(500);
         Assert.assertTrue(msg,"You must enter a Full Name");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

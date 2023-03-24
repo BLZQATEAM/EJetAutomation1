@@ -53,7 +53,6 @@ public class Email_Field extends ReadWebinarPropertiesFile {
             txt_email.sendKeys(Keys.BACK_SPACE);
         }
         Thread.sleep(3000);
-        String error_msg=error.getText();
         boolean value=email_req_msg.isDisplayed();
         return value;
     }

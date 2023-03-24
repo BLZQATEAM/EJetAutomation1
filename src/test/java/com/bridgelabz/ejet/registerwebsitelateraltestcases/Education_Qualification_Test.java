@@ -47,7 +47,7 @@ public class Education_Qualification_Test extends ReadWebinarPropertiesFile {
         Assert.assertEquals(msg,"Others (Non Engineering and Non MSc/MCA)");
     }
     @Test
-    public void not_select_passOut_Year() throws InterruptedException, AWTException {
+    public void not_select_EducationQualification() throws InterruptedException, AWTException {
         String msg = qualification.empty_Value();
         Assert.assertEquals(msg,"Stream Required");
     }

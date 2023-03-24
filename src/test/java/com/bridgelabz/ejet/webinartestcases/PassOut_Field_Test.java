@@ -3,9 +3,8 @@ package com.bridgelabz.ejet.webinartestcases;
 import com.bridgelabz.ejet.base.BaseClass;
 import com.bridgelabz.ejet.pages.PassOut_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.awt.*;
 
 public class PassOut_Field_Test extends BaseClass {
@@ -14,7 +13,7 @@ public class PassOut_Field_Test extends BaseClass {
     public PassOut_Field_Test() {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws InterruptedException {
         initialization();
         passout = new PassOut_Field(driver);
@@ -61,7 +60,7 @@ public class PassOut_Field_Test extends BaseClass {
         Assert.assertEquals(msg,"Year Required");
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

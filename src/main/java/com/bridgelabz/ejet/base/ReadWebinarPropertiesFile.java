@@ -40,8 +40,10 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("RegisterWebsiteLateral"));
         }else if(url.equals(prop.getProperty("indexPage_Url"))){
             driver.get(prop.getProperty("indexPage_Url"));
-        }else if (url.equals(prop.getProperty("RegisterWebsiteUserUrl"))){
+        }else if(url.equals(prop.getProperty("RegisterWebsiteUserUrl"))){
             driver.get(prop.getProperty("RegisterWebsiteUserUrl"));
+        }else if(url.equals(prop.getProperty("CodingClubRegisterURL"))){
+            driver.get(prop.getProperty("CodingClubRegisterURL"));
         }
         new WebDriverWait(driver, Duration.ofSeconds(10));
     }

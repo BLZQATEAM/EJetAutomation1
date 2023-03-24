@@ -4,9 +4,7 @@ import com.bridgelabz.ejet.base.BaseClass;
 import com.bridgelabz.ejet.pages.Enter_Room_Button;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 
@@ -17,7 +15,7 @@ public class Enter_Room_Test extends BaseClass {
         super();
     }
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws InterruptedException {
         initialization();
         enterRoom = new Enter_Room_Button(driver);
@@ -30,7 +28,7 @@ public class Enter_Room_Test extends BaseClass {
         boolean msg = enterRoom.clickEnter();
         Assert.assertTrue(msg);
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }
