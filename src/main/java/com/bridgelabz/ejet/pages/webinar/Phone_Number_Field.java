@@ -1,4 +1,4 @@
-package com.bridgelabz.ejet.pages;
+package com.bridgelabz.ejet.pages.webinar;
 
 import com.bridgelabz.ejet.base.BaseClass;
 import org.openqa.selenium.WebDriver;

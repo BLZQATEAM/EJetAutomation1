@@ -1,10 +1,9 @@
 package com.bridgelabz.ejet.webinartestcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.Education_Qualification;
+import com.bridgelabz.ejet.pages.webinar.Education_Qualification;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.awt.*;
 
 public class Education_Qualification_Test extends BaseClass {

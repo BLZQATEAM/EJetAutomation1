@@ -1,7 +1,7 @@
 package com.bridgelabz.ejet.webinartestcases;
 
 import com.bridgelabz.ejet.base.BaseClass;
-import com.bridgelabz.ejet.pages.Email_Field;
+import com.bridgelabz.ejet.pages.webinar.Email_Field;
 import org.testng.Assert;
 import org.testng.annotations.*;
 

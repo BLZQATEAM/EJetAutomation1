@@ -1,8 +1,9 @@
-package com.bridgelabz.ejet.pages;
+package com.bridgelabz.ejet.pages.webinar;
 
-import com.bridgelabz.ejet.base.BaseClass;
+import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.ejet_reports.Dashboard;
 import com.bridgelabz.ejet.ejet_reports.Login;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 
-public class WebinarRegistration_Page extends BaseClass {
+public class WebinarRegistration_Page extends ReadWebinarPropertiesFile {
+
+    WebDriver driver;
+    Dashboard dashboard = new Dashboard(driver);
+
     @FindBy(id="deftphnumber")
     WebElement phone_Number;
 
@@ -36,16 +41,17 @@ public class WebinarRegistration_Page extends BaseClass {
     @FindBy(xpath="//span[contains(text(),'ENTER ROOM')]")
     WebElement btn_room;
 
-    public WebinarRegistration_Page(WebDriver driver){
+    public WebinarRegistration_Page(WebDriver driver) throws IOException {
+        super();
         this.driver=driver;
         PageFactory.initElements(driver, this);
     }
 
     public void enterData_InFields() throws InterruptedException {
         Thread.sleep(3000);
-        phone_Number.sendKeys("7038053665");
+        phone_Number.sendKeys(prop.getProperty("myPhoneNo"));
         Thread.sleep(3000);
-        txt_email.sendKeys("sheetal.chaudhari2@bridgelabz.com");
+        txt_email.sendKeys(prop.getProperty("myEmailId"));
         Thread.sleep(3000);
         txt_uname.sendKeys("Sheetal Chaudhari");
 
@@ -68,14 +74,4 @@ public class WebinarRegistration_Page extends BaseClass {
         Thread.sleep(3000);
         return value;
     }
-
-//    public void dataValidation() throws IOException, InterruptedException {
-//        driver.navigate().to("https://ejetreports.bridgelabz.com/");
-//        Login logIn = new Login(driver);
-//        logIn.login("pm.reports@bridgelabz.com","Br1dge1@bz");
-//
-//        Dashboard dashboard = new Dashboard(driver);
-//        dashboard.select_Reports();
-//        dashboard.select_Report_Type("Get Registered Lead User by Slot Type With Date Range");
-//    }
 }

@@ -16,7 +16,7 @@ public class Login {
     @FindBy(xpath = "//button[text()='Login']")
     WebElement login_button;
 
-    public Login(WebDriver driver) throws IOException {
+    public Login(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }

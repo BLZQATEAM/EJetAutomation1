@@ -3,6 +3,87 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/dell/Documents/QADevPrograms/EJetTestScript">
         <classes>
+            <class name="com.bridgelabz.ejet.condingclubregister.Education_Qualification_Test">
+                <methods>
+                    <include name="select_Engineering_Cs_Or_It"/>
+                    <include name="select_Engineering_Non_Cs_Or_It"/>
+                    <include name="select_Masters_Cs_Or_It"/>
+                    <include name="select_Masters_Non_Cs_Or_It"/>
+                    <include name="select_Other"/>
+                    <include name="not_select_EducationQualification"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.condingclubregister.Email_Field_Test">
+                <methods>
+                    <include name="enter_Valid_EmailId"/>
+                    <include name="enter_EmptyString_EmailId"/>
+                    <include name="enter_Without_UserName"/>
+                    <include name="enter_EmailId_With_Space"/>
+                    <include name="enter_Valid_Email_After_Space"/>
+                    <include name="enter_Space_After_EmailId"/>
+                    <include name="enter_Email_Without_Dot"/>
+                    <include name="enter_Email_Without_At"/>
+                    <include name="enter_Email_Without_Dotcom"/>
+                    <include name="enter_EmailId_Without_AtGmailDotCom"/>
+                    <include name="removing_Valid_Email_From_EmailField"/>
+                    <include name="removing_Invalid_Email_From_EmailField"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.condingclubregister.Full_Name_Field_Test">
+                <methods>
+                    <include name="enter_Valid_FullName"/>
+                    <include name="enter_EmptyString"/>
+                    <include name="enter_TwoChar"/>
+                    <include name="enter_ThreeChar"/>
+                    <include name="user_Enter_FullName_Without_Space"/>
+                    <include name="user_Enter_Space_After_LastName"/>
+                    <include name="Enter_Double_Space_Between_First_And_LastName"/>
+                    <include name="user_Enter_ThreeGroup_Of_Char"/>
+                    <include name="user_Enter_Numeric_Char"/>
+                    <include name="user_enter_Spacial_Char_"/>
+                    <include name="user_Remove_ValidName_From_NameField"/>
+                    <include name="user_Remove_InvalidName_From_NameField"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.condingclubregister.PassOut_Field_Test">
+                <methods>
+                    <include name="select_TwoThousandTwentyFour"/>
+                    <include name="select_TwoThousandTwentyThree"/>
+                    <include name="select_TwoThousandTwentyTwo"/>
+                    <include name="select_TwoThousandTwentyOne"/>
+                    <include name="select_TwoThousandTwenty"/>
+                    <include name="select_Before_TwoThousandTwenty"/>
+                    <include name="select_After_TwoThousandTwentyFour"/>
+                    <include name="not_Select_passOut_Year"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.condingclubregister.Ph_Num_Field_Test">
+                <methods>
+                    <include name="new_User_Enter_Valid_PhNumber"/>
+                    <include name="new_User_Enter_EmptyString"/>
+                    <include name="new_User_Enter_SpecialChar"/>
+                    <include name="new_User_Enter_Character"/>
+                    <include name="new_User_Enter_Space_Between_PhNumber"/>
+                    <include name="new_User_Enter_plus_NinetyOne"/>
+                    <include name="new_User_Enter_plus_NinetyOne_And_Hyphen"/>
+                    <include name="new_User_Enter_NineDigit_PhNumber"/>
+                    <include name="new_User_After_Enter_InValidData_RemoveData_Form_PhField"/>
+                    <include name="new_User_After_Enter_ValidData_RemoveData_Form_PhField"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.condingclubregister.Register_For_Free_Test">
+                <methods>
+                    <include name="click_Enable_EnterButton"/>
+                    <include name="click_Disable_EnterButton"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.indextestcases.Index_Main_Page_Test">
+                <methods>
+                    <include name="click_To_Register_And_Check_Navigated_To_Lateral_Page"/>
+                    <include name="click_On_Apply_Now_And_Check_Navigated_To_RegisterWebsiteUser_Page"/>
+                    <include name="click_Attend_Orientation_Button_And_Check_Navigated_To_Webinar_page"/>
+                </methods>
+            </class>
             <class name="com.bridgelabz.ejet.registerinstatestcases.default_registration.test.Aggregate_Percentage_Test">
                 <methods>
                     <include name="select_Below_Sixty"/>
@@ -18,7 +99,7 @@
                     <include name="select_Masters_Cs_Or_It"/>
                     <include name="select_Masters_Non_Cs_Or_It"/>
                     <include name="select_Other"/>
-                    <include name="not_select_passOut_Year"/>
+                    <include name="not_select_EducationQualification"/>
                 </methods>
             </class>
             <class name="com.bridgelabz.ejet.registerinstatestcases.default_registration.test.Email_Field_Test">
@@ -100,7 +181,7 @@
                     <include name="select_Masters_Cs_Or_It"/>
                     <include name="select_Masters_Non_Cs_Or_It"/>
                     <include name="select_Other"/>
-                    <include name="not_select_passOut_Year"/>
+                    <include name="not_select_EducationQualification"/>
                 </methods>
             </class>
             <class name="com.bridgelabz.ejet.registerinstatestcases.popup_registration_Test.Popup_Email_Field_Test">
@@ -173,7 +254,7 @@
                     <include name="select_Masters_Cs_Or_It"/>
                     <include name="select_Masters_Non_Cs_Or_It"/>
                     <include name="select_Other"/>
-                    <include name="not_select_passOut_Year"/>
+                    <include name="not_select_EducationQualification"/>
                 </methods>
             </class>
             <class name="com.bridgelabz.ejet.registerwebsitelateraltestcases.Email_Field_Test">
@@ -252,6 +333,74 @@
                     <include name="not_select_passOut_Year"/>
                 </methods>
             </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Educational_Qualification_Test">
+                <methods>
+                    <include name="select_Engineering_Cs_Test"/>
+                    <include name="select_Engineering_Non_It_Test"/>
+                    <include name="select_Masters_Cs_Test"/>
+                    <include name="select_Masters_Non_It_Test"/>
+                    <include name="select_Others_Test"/>
+                    <include name="without_Selecting_Education_Qualification_Test"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Email_Id_Test">
+                <methods>
+                    <include name="valid_Email_Id_Test"/>
+                    <include name="empty_Email_Id_Test"/>
+                    <include name="email_Id_With_Space_Test"/>
+                    <include name="invalid_Email_Id_Test"/>
+                    <include name="space_After_Email_Id"/>
+                    <include name="space_Before_Email_ID_Test"/>
+                    <include name="email_Without_Dotcom_Test"/>
+                    <include name="email_Without_At_The_Rate_Test"/>
+                    <include name="enter_And_Remove_Email_Id_From_EmailField_Test"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Enter_Phone_Number_Test">
+                <methods>
+                    <include name="new_Valid_Phone_Number"/>
+                    <include name="empty_Phone_Number"/>
+                    <include name="phn_No_With_Spl_Char"/>
+                    <include name="phn_No_With_Char"/>
+                    <include name="Phn_Number_With_Space"/>
+                    <include name="Phn_Number_With_Plus_NinetyOne"/>
+                    <include name="nineDigit_Phn_Number"/>
+                    <include name="new_User_Enter_InValid_Phn_No_And_Remove_Form_Phn_No_Field"/>
+                    <include name="new_User_Enter_Valid_Phn_No_And_Remove_Form_Phn_No_Field"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Full_Name_Test">
+                <methods>
+                    <include name="valid_FullName_Test"/>
+                    <include name="fullName_With_Special_Char_Test"/>
+                    <include name="fullName_With_Numeric_Value_Test"/>
+                    <include name="empty_FullName_Test"/>
+                    <include name="only_Two_Char_FullName_Test"/>
+                    <include name="only_Three_Char_FullName_Test"/>
+                    <include name="three_Char_FirstName_And_Two_Char_LastName_Test"/>
+                    <include name="fullName_Without_Space_Test"/>
+                    <include name="space_After_LastName_Test"/>
+                    <include name="enter_And_Remove_Value_From_FullName_Test"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Select_Year_Of_Passout_Test">
+                <methods>
+                    <include name="select_TwoThousandTwentyFour_Test"/>
+                    <include name="select_TwoThousandTwentyThree_Test"/>
+                    <include name="select_TwoThousandTwentyTwo_Test"/>
+                    <include name="select_TwoThousandTwentyOne_Test"/>
+                    <include name="select_TwoThousandTwenty_Test"/>
+                    <include name="select_Before_TwoThousandTwenty_Test"/>
+                    <include name="select_After_TwoThousandTwentyFour_Test"/>
+                    <include name="not_Select_any_passOut_Year_Test"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.ejet.registerwebsiteuser.Submit_Button_Test">
+                <methods>
+                    <include name="click_Enable_EnterButton"/>
+                    <include name="click_Disable_Submit_Button_Test"/>
+                </methods>
+            </class>
             <class name="com.bridgelabz.ejet.webinartestcases.Education_Qualification_Test">
                 <methods>
                     <include name="select_Engineering_Cs_Or_It"/>
@@ -259,7 +408,7 @@
                     <include name="select_Masters_Cs_Or_It"/>
                     <include name="select_Masters_Non_Cs_Or_It"/>
                     <include name="select_Other"/>
-                    <include name="not_select_passOut_Year"/>
+                    <include name="not_select_EducationQualification"/>
                 </methods>
             </class>
             <class name="com.bridgelabz.ejet.webinartestcases.Email_Field_Test">
