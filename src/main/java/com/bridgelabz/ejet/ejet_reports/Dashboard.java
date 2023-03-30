@@ -38,7 +38,7 @@ public class Dashboard extends ReadWebinarPropertiesFile {
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/button[1]")
     WebElement end_date_cal;
 
-    @FindBy(xpath="//button[@aria-label='Mar 27, 2023']")
+    @FindBy(xpath="//button[@aria-label='Mar 30, 2023']")
     WebElement select_end_date;
 
     @FindBy(xpath = "//button[text()='Apply']")
@@ -118,20 +118,26 @@ public class Dashboard extends ReadWebinarPropertiesFile {
         WebElement firstName = tableRow.findElement(By.xpath("//tbody/tr[1]/td[4]"));
         String firstNameText = firstName.getText();
         System.out.println("Cell value for firstname is : " + firstNameText);
-//        if(firstNameText.equals(prop.getProperty("myFirstName"))){
-//            System.out.println(prop.getProperty("myFirstName") + "first name matched!!" + firstNameText);
-//        }
+        if(firstNameText.equals(prop.getProperty("myFirstName"))){
+            System.out.println(prop.getProperty("myFirstName") + "first name matched!!" + firstNameText);
+        }else {
+            System.out.println("first name Not Matched!!");
+        }
 
         //1st Row : Lastname
         WebElement lastName = tableRow.findElement(By.xpath("//tbody/tr[1]/td[5]"));
         String lastNameText = lastName.getText();
         System.out.println("Cell value for lastname is : " + lastNameText);
+        if(firstNameText.equals(prop.getProperty("myLastName"))){
+            System.out.println(prop.getProperty("myLastName") + "last name matched!!" + lastNameText);
+        }else {
+            System.out.println("last name Not Matched!!");
+        }
 
         //1st Row :  Mobile no
         WebElement mobileNo = tableRow.findElement(By.xpath("//tbody/tr[1]/td[6]"));
         String mobileNoText = mobileNo.getText();
         System.out.println("Cell value for mobile is : " + mobileNoText);
-
         if(mobileNoText.equals(prop.getProperty("myPhoneNo"))){
             System.out.println(prop.getProperty("myPhoneNo") + "Phone no matched!!" + mobileNoText);
         }else {
@@ -142,7 +148,6 @@ public class Dashboard extends ReadWebinarPropertiesFile {
         WebElement emailId = tableRow.findElement(By.xpath("//tbody/tr[1]/td[7]"));
         String emailIdText = emailId.getText();
         System.out.println("Cell value for Email is : " + emailIdText);
-
         if(emailIdText.equals(prop.getProperty("myEmailId"))){
             System.out.println(prop.getProperty("myEmailId") + "Email Id matched!!" + emailIdText);
         }else {

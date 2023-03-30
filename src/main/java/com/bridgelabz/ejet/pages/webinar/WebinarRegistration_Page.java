@@ -2,8 +2,6 @@ package com.bridgelabz.ejet.pages.webinar;
 
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.ejet_reports.Dashboard;
-import com.bridgelabz.ejet.ejet_reports.Login;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,7 +51,7 @@ public class WebinarRegistration_Page extends ReadWebinarPropertiesFile {
         Thread.sleep(3000);
         txt_email.sendKeys(prop.getProperty("myEmailId"));
         Thread.sleep(3000);
-        txt_uname.sendKeys("Sheetal Chaudhari");
+        txt_uname.sendKeys(prop.getProperty("myFirstname")," ", prop.getProperty("myLastname"));
 
         dr_stream.sendKeys(Keys.PAGE_DOWN);
         Thread.sleep(3000);
