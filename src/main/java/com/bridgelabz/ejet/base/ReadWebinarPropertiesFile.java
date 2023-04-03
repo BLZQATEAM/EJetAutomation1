@@ -28,8 +28,8 @@ public class ReadWebinarPropertiesFile {
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
-
         driver.manage().window().maximize();
+
         if(url.equals(prop.getProperty("Reg_Url"))){
             driver.get(prop.getProperty("Reg_Url"));
         }else if (url.equals(prop.getProperty("Orientation_Url"))){
@@ -44,6 +44,8 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("RegisterWebsiteUserUrl"));
         }else if(url.equals(prop.getProperty("CodingClubRegisterURL"))){
             driver.get(prop.getProperty("CodingClubRegisterURL"));
+        }else if (url.equals(prop.getProperty("CodingClub_Workshop"))){
+            driver.get(prop.getProperty("CodingClub_Workshop"));
         }
         new WebDriverWait(driver, Duration.ofSeconds(10));
     }
