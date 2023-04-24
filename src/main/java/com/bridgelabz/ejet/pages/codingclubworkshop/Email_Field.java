@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class Email_Field {
     WebDriver driver;
-
     @FindBy(id="poptemail")
     WebElement txt_email;
     @FindBy(id="poptemailvalid")

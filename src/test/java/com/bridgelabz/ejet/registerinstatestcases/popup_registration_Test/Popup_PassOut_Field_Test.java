@@ -4,7 +4,9 @@ import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.PassOut_Field;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.Register_By_Popup;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -17,7 +19,7 @@ public class Popup_PassOut_Field_Test extends ReadWebinarPropertiesFile {
     public Popup_PassOut_Field_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
         initialization(prop.getProperty("RegistrationInsta"));
         passout = new PassOut_Field(driver);
@@ -64,5 +66,10 @@ public class Popup_PassOut_Field_Test extends ReadWebinarPropertiesFile {
     public void not_Select_passOut_Year() throws InterruptedException, AWTException {
         String msg = passout.empty_Value();
         Assert.assertEquals(msg,"Year Required");
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.close();
     }
 }

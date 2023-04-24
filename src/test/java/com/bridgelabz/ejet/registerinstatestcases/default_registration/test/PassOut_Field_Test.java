@@ -3,7 +3,9 @@ package com.bridgelabz.ejet.registerinstatestcases.default_registration.test;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.defaultregistration.PassOut_Field;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -15,7 +17,7 @@ public class PassOut_Field_Test extends ReadWebinarPropertiesFile {
     public PassOut_Field_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegistrationInsta"));
         passout = new PassOut_Field(driver);
@@ -59,5 +61,10 @@ public class PassOut_Field_Test extends ReadWebinarPropertiesFile {
     public void not_Select_passOut_Year() throws InterruptedException, AWTException {
         String msg = passout.empty_Value();
         Assert.assertEquals(msg,"Year Required");
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.close();
     }
 }

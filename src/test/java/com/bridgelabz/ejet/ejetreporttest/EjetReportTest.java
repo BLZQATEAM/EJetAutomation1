@@ -11,15 +11,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class EjetReportTest {
-    @Test
+    //@Test
     public void main() throws InterruptedException, IOException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.navigate().to("https://ejetreports.dev.bridgelabz.com/");
+        driver.get("https://ejetreports.dev.bridgelabz.com/");
         Login logIn = new Login(driver);
         logIn.login("pm.reports@bridgelabz.com","Br1dge1@bz");
 

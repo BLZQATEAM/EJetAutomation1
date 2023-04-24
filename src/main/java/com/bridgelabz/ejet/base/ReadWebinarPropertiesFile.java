@@ -19,7 +19,7 @@ public class ReadWebinarPropertiesFile {
         prop = new Properties();
         FileInputStream ip;
         ip = new FileInputStream(
-                "C:\\Users\\dell\\Documents\\QADevPrograms\\EJetTestScript\\src\\main\\java\\com\\bridgelabz\\ejet\\testdata\\Webinar.properties");
+                "src/main/java/com/bridgelabz/ejet/testdata/Webinar.properties");
         prop.load(ip);
 
     }
@@ -46,6 +46,8 @@ public class ReadWebinarPropertiesFile {
             driver.get(prop.getProperty("CodingClubRegisterURL"));
         }else if (url.equals(prop.getProperty("CodingClub_Workshop"))){
             driver.get(prop.getProperty("CodingClub_Workshop"));
+        }else if(url.equals(prop.getProperty("Experienced_Engineer"))) {
+            driver.get(prop.getProperty("Experienced_Engineer"));
         }
         new WebDriverWait(driver, Duration.ofSeconds(10));
     }

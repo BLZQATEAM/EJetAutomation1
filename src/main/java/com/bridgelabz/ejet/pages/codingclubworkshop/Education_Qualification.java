@@ -28,7 +28,6 @@ public class Education_Qualification {
     public Education_Qualification(WebDriver driver) throws IOException {
         this.driver=driver;
         PageFactory.initElements(driver, this);
-
     }
     public String eduction_Qualification(String education) throws InterruptedException, AWTException {
 

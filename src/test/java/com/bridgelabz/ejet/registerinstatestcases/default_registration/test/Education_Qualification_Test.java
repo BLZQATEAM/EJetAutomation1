@@ -3,7 +3,9 @@ package com.bridgelabz.ejet.registerinstatestcases.default_registration.test;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.defaultregistration.Education_Qualification;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -15,7 +17,7 @@ public class Education_Qualification_Test extends ReadWebinarPropertiesFile {
     public Education_Qualification_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegistrationInsta"));
         qualification = new Education_Qualification(driver);
@@ -49,5 +51,10 @@ public class Education_Qualification_Test extends ReadWebinarPropertiesFile {
     public void not_select_EducationQualification() throws InterruptedException, AWTException {
         String msg = qualification.empty_Value();
         Assert.assertEquals(msg,"Stream Required");
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.close();
     }
 }

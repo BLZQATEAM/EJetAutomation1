@@ -3,9 +3,8 @@ package com.bridgelabz.ejet.condingclubregister;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.codingclubregister.PassOut_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.awt.*;
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ public class PassOut_Field_Test extends ReadWebinarPropertiesFile {
     public PassOut_Field_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("CodingClubRegisterURL"));
         passout = new PassOut_Field(driver);
@@ -60,7 +59,7 @@ public class PassOut_Field_Test extends ReadWebinarPropertiesFile {
         String msg = passout.empty_Value();
         Assert.assertEquals(msg,"Year Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

@@ -40,6 +40,10 @@ public class Email_Field extends ReadWebinarPropertiesFile {
         } else if (error_msg.equals("Email Required")) {
             value= email_req_msg.isDisplayed();
         }
+
+        for(int i=0;i<valid_emailid.length();i++){
+            txt_email.sendKeys(Keys.BACK_SPACE);
+        }
         return value;
 
     }
@@ -52,6 +56,9 @@ public class Email_Field extends ReadWebinarPropertiesFile {
         Thread.sleep(3000);
         String error_msg=error.getText();
         boolean value=invalid_email_msg.isDisplayed();
+        for(int i=0;i<valid_emailid.length();i++){
+            txt_email.sendKeys(Keys.BACK_SPACE);
+        }
         return value;
 
     }

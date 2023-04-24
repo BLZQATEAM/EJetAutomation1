@@ -55,6 +55,9 @@ public class Full_Name_Field extends ReadWebinarPropertiesFile {
         } else if (error_msg.equals("No space after first & last name")) {
             value= username_err_msg6.isDisplayed();
         }
+        for(int i=0;i<valid_name.length();i++){
+            txt_uname.sendKeys(Keys.BACK_SPACE);
+        }
         return value;
     }
     public boolean invalid_FullName(String invalid_name) throws InterruptedException, AWTException {
@@ -77,6 +80,10 @@ public class Full_Name_Field extends ReadWebinarPropertiesFile {
         } else if (error_msg.equals("No space after first & last name")) {
             value= username_err_msg6.isDisplayed();
         }
+
+        for(int i=0;i<invalid_name.length();i++){
+            txt_uname.sendKeys(Keys.BACK_SPACE);
+        }
         return value;
     }
     public boolean removing_Value_From_FullNameField(String name) throws InterruptedException, AWTException {
@@ -91,6 +98,10 @@ public class Full_Name_Field extends ReadWebinarPropertiesFile {
         }
         String error_msg=error.getText();
         boolean  value= username_err_msg1.isDisplayed();
+
+        for(int i=0;i<name.length();i++){
+            txt_uname.sendKeys(Keys.BACK_SPACE);
+        }
         return value;
     }
 

@@ -3,9 +3,7 @@ package com.bridgelabz.ejet.registerinstatestcases.default_registration.test;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.defaultregistration.Aggregate_Percentage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -16,7 +14,7 @@ public class Aggregate_Percentage_Test extends ReadWebinarPropertiesFile {
     public Aggregate_Percentage_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegistrationInsta"));
         aggregate = new Aggregate_Percentage(driver);
@@ -41,7 +39,7 @@ public class Aggregate_Percentage_Test extends ReadWebinarPropertiesFile {
         String msg = aggregate.empty_Value();
         Assert.assertEquals(msg,"CGPA Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.quit();
     }

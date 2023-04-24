@@ -4,7 +4,9 @@ import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.Aggregate_Percentage;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.Register_By_Popup;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -17,7 +19,7 @@ public class Popup_Aggregate_Percentage_Test extends ReadWebinarPropertiesFile {
     public Popup_Aggregate_Percentage_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
         initialization(prop.getProperty("RegistrationInsta"));
         aggregate = new Aggregate_Percentage(driver);
@@ -44,5 +46,10 @@ public class Popup_Aggregate_Percentage_Test extends ReadWebinarPropertiesFile {
     public void not_select_passOut_Year() throws InterruptedException, AWTException {
         String msg = aggregate.empty_Value();
         Assert.assertEquals(msg,"CGPA Required");
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.close();
     }
 }

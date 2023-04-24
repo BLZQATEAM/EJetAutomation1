@@ -3,9 +3,7 @@ package com.bridgelabz.ejet.registerwebsitelateraltestcases;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerwebsitelateral.Education_Qualification;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -16,7 +14,7 @@ public class Education_Qualification_Test extends ReadWebinarPropertiesFile {
     public Education_Qualification_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegisterWebsiteLateral"));
         qualification = new Education_Qualification(driver);
@@ -52,7 +50,7 @@ public class Education_Qualification_Test extends ReadWebinarPropertiesFile {
         Assert.assertEquals(msg,"Stream Required");
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

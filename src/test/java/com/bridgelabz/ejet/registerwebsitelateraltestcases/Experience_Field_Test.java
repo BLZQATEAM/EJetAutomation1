@@ -3,9 +3,7 @@ package com.bridgelabz.ejet.registerwebsitelateraltestcases;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerwebsitelateral.Experience_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -16,7 +14,7 @@ public class Experience_Field_Test extends ReadWebinarPropertiesFile {
     public Experience_Field_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegisterWebsiteLateral"));
         experience = new Experience_Field(driver);
@@ -56,7 +54,7 @@ public class Experience_Field_Test extends ReadWebinarPropertiesFile {
         String msg = experience.empty_Value();
         Assert.assertEquals(msg,"Experience(Years) Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

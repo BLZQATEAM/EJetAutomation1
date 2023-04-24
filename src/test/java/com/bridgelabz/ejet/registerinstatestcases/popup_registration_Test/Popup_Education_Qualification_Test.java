@@ -4,7 +4,9 @@ import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.Education_Qualification;
 import com.bridgelabz.ejet.pages.registerinsta.popupregisterinsta.Register_By_Popup;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -17,7 +19,7 @@ public class Popup_Education_Qualification_Test  extends ReadWebinarPropertiesFi
     public Popup_Education_Qualification_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
         initialization(prop.getProperty("RegistrationInsta"));
         qualification = new Education_Qualification(driver);
@@ -54,5 +56,10 @@ public class Popup_Education_Qualification_Test  extends ReadWebinarPropertiesFi
     public void not_select_EducationQualification() throws InterruptedException, AWTException {
         String msg = qualification.empty_Value();
         Assert.assertEquals(msg,"Stream Required");
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.close();
     }
 }

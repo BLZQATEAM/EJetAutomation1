@@ -3,9 +3,8 @@ package com.bridgelabz.ejet.registerwebsiteuser;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerwebsiteuser.Select_Year_Of_Passout;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.io.IOException;
 
 public class Select_Year_Of_Passout_Test extends ReadWebinarPropertiesFile {
@@ -14,7 +13,7 @@ public class Select_Year_Of_Passout_Test extends ReadWebinarPropertiesFile {
     public Select_Year_Of_Passout_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegisterWebsiteUserUrl"));
         select_year_of_passout = new Select_Year_Of_Passout(driver);
@@ -59,7 +58,7 @@ public class Select_Year_Of_Passout_Test extends ReadWebinarPropertiesFile {
         String msg = select_year_of_passout.empty_PassOut_Value();
         Assert.assertEquals(msg,"Year Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

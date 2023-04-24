@@ -3,9 +3,8 @@ package com.bridgelabz.ejet.registerwebsitelateraltestcases;
 import com.bridgelabz.ejet.base.ReadWebinarPropertiesFile;
 import com.bridgelabz.ejet.pages.registerwebsitelateral.Work_Area_Field;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.awt.*;
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ public class Work_Area_Field_Test extends ReadWebinarPropertiesFile {
     public Work_Area_Field_Test() throws IOException {
         super();
     }
-    @BeforeMethod
+    @BeforeTest
     public void setUp() throws IOException {
         initialization(prop.getProperty("RegisterWebsiteLateral"));
         workarea = new Work_Area_Field(driver);
@@ -65,7 +64,7 @@ public class Work_Area_Field_Test extends ReadWebinarPropertiesFile {
         String msg = workarea.empty_Value();
         Assert.assertEquals(msg,"Work Area Required");
     }
-    @AfterMethod
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

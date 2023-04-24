@@ -30,14 +30,11 @@ public class Register_For_Free_Button {
 
     }
     public void click_disable_Button() throws InterruptedException, AWTException {
-
         Robot robot=new Robot();
         robot.mouseWheel(5);
-
         Thread.sleep(3000);
         String classValue = btn_room.getAttribute("class");
         btn_room.click();
         System.out.println(classValue);
-
     }
 }
